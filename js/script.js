@@ -40,12 +40,12 @@ for(let i = 0; i < teamMembers.length; i++){
 }
 
 for(let i = 0; i < teamMembers.length; i++){
-    
+    divElement.appendChild(createElement(teamMembers[i].name, teamMembers[i].role, teamMembers[i].picture));
 }
 
 function createElement(name, role, picture){
     let element = document.createElement("p");
-    element.innerHTML = name + " " + role + " " + picture;
+    element.innerHTML = name + " - " + role + " - " + picture;
 
     return element;
 }
