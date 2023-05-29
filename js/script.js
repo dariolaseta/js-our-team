@@ -31,8 +31,21 @@ const teamMembers = [
     },
 ];
 
+const divElement = document.getElementById("team-members");
+
 console.log(teamMembers);
 
 for(let i = 0; i < teamMembers.length; i++){
     console.log("Nome: " + teamMembers[i].name, "Ruolo: " + teamMembers[i].role, "Stringa della foto: " + teamMembers[i].picture);
+}
+
+for(let i = 0; i < teamMembers.length; i++){
+    divElement.appendChild(createElement());
+}
+
+function createElement(){
+    let element = document.createElement("p");
+    element.innerHTML = "Test";
+
+    return element;
 }
